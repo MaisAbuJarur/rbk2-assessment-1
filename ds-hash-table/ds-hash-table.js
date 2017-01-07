@@ -1,7 +1,7 @@
 var makeHashTable = function() {
   //Do not change the max!
   var max = 4;
-  var index = Math.rand* max
+  var index = Math.random(* max)
 
   return {
     _storage: [],
@@ -15,7 +15,7 @@ var makeHashTable = function() {
 
     for(var i = 0; i <bucket.length; i++)
       var tuple = bucket[i]
-      tuple = []
+      
       if(tuple[0] === key]){
         return tuple[i]
       }
