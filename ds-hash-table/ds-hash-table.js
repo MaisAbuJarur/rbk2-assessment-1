@@ -1,15 +1,44 @@
 var makeHashTable = function() {
   //Do not change the max!
   var max = 4;
+  var index = Math.rand* max
 
   return {
     _storage: [],
     retrieve: function(key) {
-      //your code is here
+      //retrieve bucket
+    var bucket = []
+
+    if(!bucket){
+      return null
+    }
+
+    for(var i = 0; i <bucket.length; i++)
+      var tuple = bucket[i]
+      tuple = []
+      if(tuple[0] === key]){
+        return tuple[i]
+      }
     },
 
     insert: function(key, value) {
-      //your code is here
+      var bucket= _storage(index)
+
+      if(!bucket){
+        bucket = []
+        _storage.push(bucket)
+      }
+      var found = false
+      //for collision
+      for (var i = 0; i < _storage.length; i++) {
+       var tuple = _storage[i]
+       if (tuple[0] === key){
+        tuple[1]=== value
+        found = true
+        continue;
+       }
+      }
+      bucket.push([key,value])
   };
 };
 
